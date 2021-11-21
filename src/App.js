@@ -45,14 +45,17 @@ function App() {
         <input className="search-button" type="submit" />
       </form>
 
-      {recipes.map((food) => (
-        <Recipes
-          key={food.recipe.image}
-          name={food.recipe.label}
-          calories={food.recipe.calories}
-          image={food.recipe.image}
-        />
-      ))}
+      <div className="recipes">
+        {recipes.map((food) => (
+          <Recipes
+            key={food.recipe.image}
+            name={food.recipe.label}
+            calories={food.recipe.calories}
+            image={food.recipe.image}
+            ingredients={food.recipe.ingredients}
+          />
+        ))}
+      </div>
     </div>
   );
 }
